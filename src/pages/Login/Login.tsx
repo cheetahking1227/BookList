@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { View, Text, StatusBar, Image, TouchableOpacity } from 'react-native';
-import { TextInput } from 'react-native-paper';
+import {
+  View,
+  Text,
+  StatusBar,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
+import { Input } from '../../components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { styles } from './styles';
 
 export const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    console.log("----Login----");
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -34,24 +44,16 @@ export const Login = () => {
         </View>
 
         <View style={styles.textInputGroup}>
-          <TextInput
+          <Input
             label="Email"
-            mode="outlined"
             value={email}
-            onChangeText={text => setEmail(text)}
-            textColor='#ffffff'
-            activeOutlineColor='#ffffff'
-            style={styles.input}
-            />
-          <TextInput
+            setValue={text => setEmail(text)}
+          />
+          <Input
             label="Password"
-            mode="outlined"
             value={password}
-            onChangeText={text => setPassword(text)}
-            secureTextEntry
-            textColor='#ffffff'
-            activeOutlineColor='#ffffff'
-            style={styles.input}
+            setValue={text => setPassword(text)}
+            security={true}
           />
         </View>
 
@@ -62,7 +64,10 @@ export const Login = () => {
         </View>
 
         <View style={styles.loginButtonContainer}>
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity
+            onPress={handleLogin}
+            style={styles.loginButton}
+          >
             <Text style={styles.loginButtonText}>Login</Text>
           </TouchableOpacity>
         </View>

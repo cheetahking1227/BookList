@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { FlatList, View, Image, Text } from 'react-native';
+import { FlatList } from 'react-native';
 import { styles } from './styles';
-import { BookItem } from '../../components/BookItem';
+import { BookItem } from '../../components';
 import { getBooks } from '../../actions';
 import { BookType } from '../../types';
 

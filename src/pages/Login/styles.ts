@@ -48,9 +48,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: wp('5%'),
     gap: 20,
   },
-  input: {
-    backgroundColor:'#0c0f17',
-  },
   forgotPasswordContainer: {
     paddingHorizontal: wp('5%'),
     marginTop: 20,
@@ -68,7 +65,7 @@ export const styles = StyleSheet.create({
   },
   loginButton: {
     backgroundColor: '#1d202b',
-    borderRadius: 8,
+    borderRadius: 3,
     paddingVertical: 15,
     alignItems: 'center',
     marginBottom: 20,
