@@ -49,13 +49,7 @@ export const styles = StyleSheet.create({
     gap: 20,
   },
   input: {
-    color: '#000',
-    borderColor: '#fff',
-    borderWidth: 1,
-    borderStyle: 'solid',
-    padding: 8,
-    backgroundColor: '#fff',
-    marginTop: 16,
+    backgroundColor:'#0c0f17',
   },
   forgotPasswordContainer: {
     paddingHorizontal: wp('5%'),

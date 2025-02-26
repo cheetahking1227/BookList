@@ -39,12 +39,19 @@ export const Login = () => {
             mode="outlined"
             value={email}
             onChangeText={text => setEmail(text)}
-          />
+            textColor='#ffffff'
+            activeOutlineColor='#ffffff'
+            style={styles.input}
+            />
           <TextInput
             label="Password"
             mode="outlined"
             value={password}
             onChangeText={text => setPassword(text)}
+            secureTextEntry
+            textColor='#ffffff'
+            activeOutlineColor='#ffffff'
+            style={styles.input}
           />
         </View>
 
